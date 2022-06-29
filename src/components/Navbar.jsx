@@ -30,7 +30,7 @@ const navbar = () => {
                 icon={<AiOutlineMenu />}
             />
             
-            
+
             <div className='flex'>
                 <NavButton
                     title='Cart'
@@ -38,6 +38,41 @@ const navbar = () => {
                     color='blue'
                     icon={<FiShoppingCart />}
                 />
+                <NavButton
+                    title='Chat'
+                    dotColor='#03c907'
+                    customFunc={() => handleClick('chat')}
+                    color='blue'
+                    icon={<BsChatLeft />}
+                />
+                <NavButton
+                    title='Notifications'
+                    dotColor='#03c907'
+                    customFunc={() => handleClick('notification')}
+                    color='blue'
+                    icon={<RiNotification3Line/>}
+                />
+                <NavButton
+                    title='Notifications'
+                    dotColor='#03c907'
+                    customFunc={() => handleClick('notification')}
+                    color='blue'
+                    icon={<RiNotification3Line/>}
+                />
+                <TooltipComponent
+                    content='Profile'
+                    position='BottomCenter'
+                >
+                    <div className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-geay rounded-lg" 
+                    onClick={() => handleClick('userProfile')}
+                    >
+                        <img src={avatar} className='rounded-full w-8 h-h' />
+                        <p>
+                            <span className='text-gray-400 text-14' >Hi, </span>{''}
+                            <span className='text-gray-400 font-bold ml-1 text-14'>Michael</span>
+                        </p>
+                    </div>
+                </TooltipComponent>
             </div>
         </div>
     )
