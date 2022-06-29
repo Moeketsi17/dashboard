@@ -3,13 +3,13 @@ import React, { createContext, useContext, useState } from 'react';
 const StateContext = createContext();
 
 const initialState = {
-    chate: false,
+    chat: false,
     cart: false,
     userProfile: false,
     notification: false,
 }
 
-export const contextProvider = ({ children }) => {
+export const ContextProvider = ({ children }) => {
 
     const [activeMenu, setActiveMenu] = useState(true);
 
