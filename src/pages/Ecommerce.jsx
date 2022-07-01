@@ -56,9 +56,57 @@ const Ecommerce = () => {
                     <div className="flex justify-between">
                         <p className='font-semibold text-xl'>Revenue Updates</p>
                         <div className="flex items-center gap-4">
-                            <p>
-                                <span><GoPrimitiveDot/></span>
+                            <p className='flex items-center gap-2 text-gray-600 hover:drop-shadow-xl'>
+                                <span><GoPrimitiveDot /></span>
+                                <span>Exoense</span>
                             </p>
+                            <p className='flex items-center gap-2 text-green-400 hover:drop-shadow-xl'>
+                                <span><GoPrimitiveDot /></span>
+                                <span>Budget</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="mt-10 flex gap-10 flex-wrap justify-center">
+                        <div className="border-r-1 border-color m-4 pr-10">
+                            <div className="">
+                                <p>
+                                    <span className='text-3xl font-semibold'>$62,349</span>
+                                    <span className='p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs'>32%</span>
+                                </p>
+                                <p className='text-gray-500 mt-1'>Budget</p>
+                            </div>
+                            <div className="mt-8">
+                                <p>
+                                    <span className='text-3xl font-semibold'>$37,721</span>
+                                </p>
+                                <p className='text-gray-500 mt-1'>Expense</p>
+                            </div>
+
+                            <div className="mt-5">
+                                <SparkLine 
+                                    currentColor='blue'
+                                    id='line-sparkline'
+                                    type='line'
+                                    height='80px'
+                                    width='250px'
+                                    data={SparklineAreaData}
+                                    color='blue'
+                                />
+                            </div>
+                            <div className="mt-10">
+                                <Button
+                                    color='white'
+                                    bgColor='blue'
+                                    text='Download Report'
+                                    borderRadius='10px'
+                                />
+                            </div>
+                        </div>
+
+                        {/* right side */}
+                        <div>
+                            <Stacked width='320px' height='360px' />
                         </div>
                     </div>
                 </div>
