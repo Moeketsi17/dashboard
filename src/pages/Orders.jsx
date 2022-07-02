@@ -18,7 +18,7 @@ const Orders = () => {
                         <ColumnDirective key={index} {...item} />
                     ))}
                 </ColumnsDirective>
-                <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, EDit, PdfExport]}/>
+                <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, Edit, PdfExport]}/>
             </GridComponent>
         </div>
     )
