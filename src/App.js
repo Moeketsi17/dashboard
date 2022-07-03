@@ -41,6 +41,7 @@ const App = () => {
                     
                     
                         <div className=''>
+                            <ThemeSettings/>
                             <Routes>
                                 {/* dashboard */}
                                 <Route path='/' element={<Ecommerce />} />
